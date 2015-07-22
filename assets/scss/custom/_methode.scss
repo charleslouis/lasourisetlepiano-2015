@@ -1,0 +1,41 @@
+.li-tools{
+  text-align: center;
+}
+.tool-item{
+	width: 100%;
+}
+.tool-itm-lnk{
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	&:hover{
+		color: $grayLighter;
+	}
+	img{
+		width: 100%;
+		padding: 0 10%;
+	}
+}
+.tool-img{
+	
+}
+
+.tool-itm{
+	padding-bottom: 2em;
+	@extend  .small-4;
+	@extend  .large-2;
+}
+
+.method-el {
+
+	[class*="icon-"]{
+		&:before{
+			display: block;
+			float: left;
+			padding: 0 0.125em;
+			color: $grayLight;
+			font-size: 2.8em;
+		}
+	}
+
+}

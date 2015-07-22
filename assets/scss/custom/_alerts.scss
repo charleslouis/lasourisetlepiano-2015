@@ -1,0 +1,22 @@
+.alert-contact-owner{
+	@extend .columns;
+	@extend .medium-6;
+	@extend .medium-offset-3;
+	@extend .alert-box;
+	z-index: 900;
+	text-align: center;
+	background-color: $grayDarker;
+	margin-top: 0.5em;
+
+	a{
+		color: $grayLight;
+	}
+	
+	p{
+		margin-bottom: 0;
+		color: $grayLight;
+	}
+	.close{
+		color: $grayLighter;
+	}
+}

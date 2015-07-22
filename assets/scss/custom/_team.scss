@@ -1,0 +1,18 @@
+// //team
+
+.team-list{
+	@extend .vignette-list;
+}
+
+.team-li{
+	@extend .vignettes-li;
+}
+
+
+// team member
+
+.infos--team-member {
+	.contact-us-info:before{
+		padding-right: 0.5em;
+	}
+}

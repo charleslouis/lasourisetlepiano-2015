@@ -1,0 +1,12 @@
+BEGIN:VCARD
+PRODID:-//suda.co.uk//X2V 0.12 (BETA)//FR
+SOURCE:http://lasourisetlepiano.com/contactez-nous/
+NAME:Contactez-nous | La Souris et le Piano · (web)design
+VERSION:3.0
+N:;;;;
+ORG;CHARSET=utf-8:La Souris et le Piano
+FN;LANGUAGE=fr-fr;CHARSET=utf-8:La Souris et le Piano
+EMAIL:info@lasourisetlepiano.com
+ADR;LANGUAGE=fr-fr;CHARSET=utf-8:;2, rue d'Annam;75020;Paris
+TEL:+33 (0)6 10 26 56 38
+END:VCARD

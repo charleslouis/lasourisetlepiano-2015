@@ -1,0 +1,100 @@
+//vignettes
+
+.vignette-list{
+	@extend .row;
+	@extend .unstyled;
+}
+
+.vignettes-li{
+	padding: 2em 0 0;
+	@extend .unstyled;
+	@extend .columns;
+	@extend .clearfix;
+}
+
+.vignette{
+	@extend .column;
+	@extend .large-3;
+	@extend .medium-6;
+	@extend .small-12;
+	margin-bottom: 2em;
+	// @extend ._1-4-columns;
+
+	a{
+		display: block;
+		text-decoration: none;		
+		&:hover,
+		&:focus{
+			color: $gray;
+		}
+	}
+}
+
+.vignette-figure{
+	background-color: $grayDark;
+}
+
+.vignette-photo-wrapper{
+	@extend .image-block-hover-and-touch;
+}
+
+
+.vignette, 
+.side-info-mbr figure{
+	img {
+		width: 100%;
+		height: auto;
+		background-image: $loader;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}	
+}
+
+
+.touch .vignette-partner figure::after{
+	background-color: $bodyBackground;
+	top: 12.5%;
+	left: 87.5%;
+}
+
+
+.vignette-caption{
+	padding: 0.5em 1em;
+	font-size: 0.75em;
+	.caption-t{
+		color: $grayLighter;
+	}
+	.caption-meta{
+		text-align: right;
+		opacity: 0.9;
+	}
+}
+
+
+// /*==========  media queries  ==========*/
+@media screen and (min-width: 500px){
+	.side-info-mbr{
+		figure{
+			width: 50%;
+			float: left;
+		}
+		ul{
+			width: 40%;
+			display: block;
+			float: left;
+			padding: 0 0 0 2em;
+		}
+	}
+}
+
+@media #{$small} {
+	.side-info-mbr{
+		figure{
+			width: 100%;
+			float: none;
+		}
+		ul{
+			padding: 2em 0 0 0;
+		}
+	}
+}

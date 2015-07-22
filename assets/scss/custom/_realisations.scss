@@ -1,0 +1,46 @@
+//realisations
+
+.realisations-li{
+	padding: 2em 0 0;
+	@extend .unstyled;
+	@extend .columns;
+	@extend .clearfix;
+}
+
+.realisation{
+	@extend .row;
+	@extend ._1-4-columns;
+
+	a{
+		display: block;
+		text-decoration: none;		
+		&:hover,
+		&:focus{
+			color: $gray;
+		}
+	}
+	figcaption{
+		padding: 0.5em 1em;
+		font-size: 0.75em;
+	}
+}
+
+.realisation-caption{
+	background-color: $grayDark;
+}
+
+.realisation-photo-wrapper{
+	@extend .image-block-hover-and-touch;
+}
+
+
+.realisation, 
+.side-info-mbr figure{
+	img {
+		width: 100%;
+		height: auto;
+		background-image: $loader;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}	
+}

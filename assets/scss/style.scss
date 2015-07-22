@@ -1,0 +1,11 @@
+// import normalize, stay at top
+@import "normalize";
+
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+//your custom style
+@import "custom-style";
