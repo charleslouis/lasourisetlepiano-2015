@@ -1,0 +1,40 @@
+//
+// Videos
+// --------------------------------------------------
+
+
+// Base class
+.video-wrapper {
+  position: relative;
+  margin-bottom: 3em; 
+  max-width: 800px;
+  margin: 0 auto; 
+}
+
+.video-player {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 90;
+  width: 100%;
+  padding-top: 52.734375%;
+  height: 0; 
+  -webkit-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;  
+    
+    .embed-video{
+      position: absolute;
+      z-index: 100;
+      top: 0;      
+      bottom: 0;
+      left: 0;
+      right: 0; 
+      width: 100%;
+      background: $playButton no-repeat 50%;
+      background-size: 15%;
+      cursor: pointer;
+    } 
+}

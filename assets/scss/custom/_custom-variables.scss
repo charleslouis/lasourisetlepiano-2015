@@ -71,6 +71,8 @@ $bootstrap: url($image_folder + "tools/bootstrap-icon.svg");
 
 $loader: url($image_folder + "map/loader.gif");
 
+$playButton: url($image_folder + "video/play_icon.png");
+
 // $plusCross is used to show that additional content is available
 $plusCross: $plusCross-svg;
 $plusCross-fallback: url($image_folder + "components/plus-cross.png");

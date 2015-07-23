@@ -24,8 +24,8 @@
 				//get the videoSource ie : the url provided by the host
 				videoSource		= $(video).attr('data-source'),
 				//get video dimensions
-				videoW			= $(video).children('figure').width(),
-				videoH			= $(video).children('figure').height();				
+				videoW			= $(video).parent().width(),
+				videoH			= videoW * 0.52734375;				
 
 				//depending on host, build a specific frame
 				if (videoHost == 'youtube') {

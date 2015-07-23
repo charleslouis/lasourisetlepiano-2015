@@ -12,34 +12,26 @@
 
 		<?php if ( get_field('video', $realisation_id) ) : ?>
 
-            <i aria-hidden="true" class=""></i>
             <?php while( has_sub_field( 'video', $realisation_id ) ): ?>
 
                 <?php $image = get_sub_field('image_video'); ?>
                 <?php $image_url = $image[sizes]['large']; ?>
-                <?php if ( $image_url && get_sub_field( 'url_video' ) ) { ?>
+                <?php if ( $image_url && get_sub_field( 'url_video' ) ) : ?>
 
 				
 				<div class="video-wrapper article-complet article block">
 					
 					<div class="video-player full" 
+						style="background-image: url('<?php echo $image_url; ?>')"
 						id="video-<?php echo( create_slug( get_sub_field( 'url_video' ))); ?>"
 						data-source="<?php the_sub_field('url_video'); ?>"
 						data-videohost="<?php the_sub_field('host_video'); ?>">
-						
-					  	<figure>
-					    	<img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
-						</figure>
-						
-					  <?php } ?>
+						<i aria-hidden="true" class="video-button-play"></i>
 					</div>
-					
-					<?php if ( get_sub_field('legende_video') ) { ?>
-					<figcaption class="caption"><?php the_sub_field('legende_video'); ?></figcaption>
-					<?php } ?>
 
 				</div>
 
+				<?php endif; ?>
             <?php endwhile; ?>
         <?php endif; ?>
 </li>
