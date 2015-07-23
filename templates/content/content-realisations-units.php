@@ -3,7 +3,7 @@
 <?php $photo = get_field('cover', $realisation_id); ?>
 <?php // $realisation_terms = wp_get_post_terms( $realisation_id, 'realisation-type'); ?>			
 <?php // $realisation_position = $realisation_terms[0]->name; //the last/lowest taxonomy level?>
-<li class="realisation column medium-8 large-6 left">
+<article class="realisation column medium-8 large-6 left">
 	<h2 class="title--realisation"><?php echo $realisation_name;?></h2>
 
 		<?php if ( get_field('video', $realisation_id) ) : ?>
@@ -31,4 +31,4 @@
             <?php endwhile; ?>
 		<h5 class="desc--realisation"><?php the_field('short_description', $realisation_id);?></h5>
         <?php endif; ?>
-</li>
+</article>

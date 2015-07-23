@@ -2335,7 +2335,7 @@ label.error {
   top: -9999px;
   left: -9999px; }
 
-.unstyled, .vignette-list, .team-list, .vignettes-li, .team-li {
+.unstyled, .vignette-list, .team-list, .vignettes-li, .team-li, .realisation {
   list-style-type: none; }
 
 .clearfix, .entry-content, .banner-content, .images-cloud, .vignettes-li, .team-li {
@@ -2370,11 +2370,12 @@ label.error {
 =            hover effects            =
 =====================================*/
 /*-----  End of hover effects  ------*/
-.image-block-hover-and-touch, .vignette-photo-wrapper {
+.image-block-hover-and-touch, .vignette-photo-wrapper, .realisation-photo-wrapper {
   position: relative; }
   .image-block-hover-and-touch::before,
   .vignette-photo-wrapper::before,
-  .image-block-hover-and-touch::after, .vignette-photo-wrapper::after {
+  .realisation-photo-wrapper::before,
+  .image-block-hover-and-touch::after, .vignette-photo-wrapper::after, .realisation-photo-wrapper::after {
     position: absolute;
     z-index: 200;
     top: 7.5%;
@@ -2385,7 +2386,7 @@ label.error {
     background-color: rgba(241, 241, 241, 0);
     border-radius: 0;
     content: ''; }
-  .image-block-hover-and-touch::after, .vignette-photo-wrapper::after {
+  .image-block-hover-and-touch::after, .vignette-photo-wrapper::after, .realisation-photo-wrapper::after {
     width: 15%;
     height: 15%;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGcgc3Ryb2tlPSIjMkMyQzJDIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgZmlsbD0ibm9uZSI+PGxpbmUgeTE9IjIwIiB4Mj0iNDAiIHkyPSIyMCIvPjxsaW5lIHgxPSIyMCIgeDI9IjIwIiB5Mj0iNDAiLz48L2c+PC9zdmc+);
@@ -2396,20 +2397,22 @@ label.error {
     border: 1px solid #a0a0a0; }
   .image-block-hover-and-touch::before,
   .vignette-photo-wrapper::before,
-  .image-block-hover-and-touch::after, .vignette-photo-wrapper::after {
+  .realisation-photo-wrapper::before,
+  .image-block-hover-and-touch::after, .vignette-photo-wrapper::after, .realisation-photo-wrapper::after {
     opacity: 1;
     -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
     -moz-transform: translateX(-50%) translateY(-50%) scale(1); }
-  .image-block-hover-and-touch::after, .vignette-photo-wrapper::after {
+  .image-block-hover-and-touch::after, .vignette-photo-wrapper::after, .realisation-photo-wrapper::after {
     display: block; }
-  .image-block-hover-and-touch::before, .vignette-photo-wrapper::before {
+  .image-block-hover-and-touch::before, .vignette-photo-wrapper::before, .realisation-photo-wrapper::before {
     display: none; }
 
-.no-touch .image-block-hover-and-touch, .no-touch .vignette-photo-wrapper {
+.no-touch .image-block-hover-and-touch, .no-touch .vignette-photo-wrapper, .no-touch .realisation-photo-wrapper {
   position: relative; }
   .no-touch .image-block-hover-and-touch::before,
   .no-touch .vignette-photo-wrapper::before,
-  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after {
+  .no-touch .realisation-photo-wrapper::before,
+  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after, .no-touch .realisation-photo-wrapper::after {
     position: absolute;
     z-index: 200;
     top: 50%;
@@ -2420,7 +2423,7 @@ label.error {
     background-color: rgba(241, 241, 241, 0.3);
     border-radius: 0;
     content: ''; }
-  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after {
+  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after, .no-touch .realisation-photo-wrapper::after {
     width: 100%;
     height: 100%;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGcgc3Ryb2tlPSIjMkMyQzJDIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgZmlsbD0ibm9uZSI+PGxpbmUgeTE9IjIwIiB4Mj0iNDAiIHkyPSIyMCIvPjxsaW5lIHgxPSIyMCIgeDI9IjIwIiB5Mj0iNDAiLz48L2c+PC9zdmc+);
@@ -2431,7 +2434,8 @@ label.error {
     border: 0 solid #a0a0a0; }
   .no-touch .image-block-hover-and-touch::before,
   .no-touch .vignette-photo-wrapper::before,
-  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after {
+  .no-touch .realisation-photo-wrapper::before,
+  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after, .no-touch .realisation-photo-wrapper::after {
     opacity: 0;
     -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
     -moz-transition: -moz-transform 0.3s, opacity 0.3s;
@@ -2439,7 +2443,7 @@ label.error {
     -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
     -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
     transform: translateX(-50%) translateY(-50%) scale(0.2); }
-  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after {
+  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after, .no-touch .realisation-photo-wrapper::after {
     -webkit-transition: -webkit-transform 1s, opacity 1s;
     -moz-transition: -moz-transform 1s, opacity 1s;
     transition: transform 1s, opacity 1s;
@@ -2448,21 +2452,24 @@ label.error {
     transform: translateX(-50%) translateY(-50%) scale(0.5); }
   .no-touch .image-block-hover-and-touch:hover::before,
   .no-touch .vignette-photo-wrapper:hover::before,
+  .no-touch .realisation-photo-wrapper:hover::before,
   .no-touch .image-block-hover-and-touch:hover::after,
   .no-touch .vignette-photo-wrapper:hover::after,
+  .no-touch .realisation-photo-wrapper:hover::after,
   .no-touch .image-block-hover-and-touch:focus::before,
   .no-touch .vignette-photo-wrapper:focus::before,
-  .no-touch .image-block-hover-and-touch:focus::after, .no-touch .vignette-photo-wrapper:focus::after {
+  .no-touch .realisation-photo-wrapper:focus::before,
+  .no-touch .image-block-hover-and-touch:focus::after, .no-touch .vignette-photo-wrapper:focus::after, .no-touch .realisation-photo-wrapper:focus::after {
     opacity: 1;
     -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
     -moz-transform: translateX(-50%) translateY(-50%) scale(1);
     transform: translateX(-50%) translateY(-50%) scale(1); }
-  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after {
+  .no-touch .image-block-hover-and-touch::after, .no-touch .vignette-photo-wrapper::after, .no-touch .realisation-photo-wrapper::after {
     display: block; }
-  .no-touch .image-block-hover-and-touch::before, .no-touch .vignette-photo-wrapper::before {
+  .no-touch .image-block-hover-and-touch::before, .no-touch .vignette-photo-wrapper::before, .no-touch .realisation-photo-wrapper::before {
     display: block; }
 
-.no-svg .image-block-hover-and-touch, .no-svg .vignette-photo-wrapper {
+.no-svg .image-block-hover-and-touch, .no-svg .vignette-photo-wrapper, .no-svg .realisation-photo-wrapper {
   border: 2px solid #A0A0A0; }
 
 .container {
@@ -3615,9 +3622,9 @@ but it's slower:
   width: 100%;
   padding-top: 52.734375%;
   height: 0;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; }
   .video-player .embed-video {
@@ -3631,3 +3638,17 @@ but it's slower:
     background: url("../img/video/play_icon.png") no-repeat 50%;
     background-size: 15%;
     cursor: pointer; }
+
+.realisation {
+  margin-bottom: 4em; }
+
+.realisation-caption {
+  background-color: #4d4d4d; }
+
+.realisation img,
+.side-info-mbr figure img {
+  width: 100%;
+  height: auto;
+  background-image: url("../img/map/loader.gif");
+  background-repeat: no-repeat;
+  background-position: center center; }

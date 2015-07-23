@@ -1,23 +1,8 @@
 //realisations
 
-.realisations-li{
-	padding: 2em 0 0;
-	@extend .unstyled;
-	@extend .columns;
-	@extend .clearfix;
-	margin-bottom: 4em; 
-}
-
 .realisation{
-
-}
-
-.title--realisation{
-	// margin-bottom: 1em; 
-}
-
-.desc--realisation{
-	// margin-top: 2em; 
+	@extend .unstyled;
+	margin-bottom: 4em;
 }
 
 .realisation-caption{
