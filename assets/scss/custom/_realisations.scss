@@ -5,24 +5,19 @@
 	@extend .unstyled;
 	@extend .columns;
 	@extend .clearfix;
+	margin-bottom: 4em; 
 }
 
 .realisation{
-	@extend .row;
-	@extend ._1-4-columns;
 
-	a{
-		display: block;
-		text-decoration: none;		
-		&:hover,
-		&:focus{
-			color: $gray;
-		}
-	}
-	figcaption{
-		padding: 0.5em 1em;
-		font-size: 0.75em;
-	}
+}
+
+.title--realisation{
+	// margin-bottom: 1em; 
+}
+
+.desc--realisation{
+	// margin-top: 2em; 
 }
 
 .realisation-caption{

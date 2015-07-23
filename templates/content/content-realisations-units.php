@@ -1,14 +1,10 @@
 <?php $realisation_id = $featured_post->ID; ?>
-
 <?php $realisation_name = $featured_post->post_title; ?>
 <?php $photo = get_field('cover', $realisation_id); ?>
 <?php // $realisation_terms = wp_get_post_terms( $realisation_id, 'realisation-type'); ?>			
 <?php // $realisation_position = $realisation_terms[0]->name; //the last/lowest taxonomy level?>
-<li class="realisation">
-	<a href="<?php echo get_permalink($realisation_id); ?>">
-		<h3 class="caption-t"><?php echo $realisation_name;?></h3>
-	</a>
-
+<li class="realisation column medium-8 large-6 left">
+	<h2 class="title--realisation"><?php echo $realisation_name;?></h2>
 
 		<?php if ( get_field('video', $realisation_id) ) : ?>
 
@@ -33,5 +29,6 @@
 
 				<?php endif; ?>
             <?php endwhile; ?>
+		<h5 class="desc--realisation"><?php the_field('short_description', $realisation_id);?></h5>
         <?php endif; ?>
 </li>
