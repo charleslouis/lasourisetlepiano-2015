@@ -8,9 +8,10 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc'
       },
       all: [
-        'Gruntfile.js',
+        // 'Gruntfile.js',
         // 'assets/js/custom/*.js',
-        '!assets/js/scripts.min.js']
+        // '!assets/js/scripts.min.js'
+      ]
     },
     sass: {                              // Task
       dev: {                            // Target
@@ -55,6 +56,7 @@ module.exports = function(grunt) {
           'assets/js/custom/config.js',
           'assets/js/custom/helpers.js',
           'assets/js/custom/map.js',
+          'assets/js/custom/load-videos.js',
           'assets/js/custom/cookies.js',
           'assets/js/custom/custom.js'
           ]
@@ -68,6 +70,7 @@ module.exports = function(grunt) {
           'assets/js/custom/config.js',
           'assets/js/custom/helpers.js',
           'assets/js/custom/map.js',
+          'assets/js/custom/load-videos.js',
           'assets/js/custom/cookies.js',
           'assets/js/custom/custom.js'
           ]

@@ -30,6 +30,7 @@
 				//depending on host, build a specific frame
 				if (videoHost == 'youtube') {
 					videoId = (videoSource.replace('http://youtu.be/', ''));
+					videoId = (videoSource.replace('https://youtu.be/', ''));
 					iframe = "<iframe width='" + videoW + " 'height='" + videoH + "' src='http://www.youtube.com/embed/" + videoId + "?autoplay=1&amp;rel=0' frameborder='0' allowfullscreen></iframe>";
 					$(video).children('.embed-video').html(iframe);
 

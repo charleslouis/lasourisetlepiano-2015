@@ -7,6 +7,7 @@
 <li class="realisation">
 	<a href="<?php echo get_permalink($realisation_id); ?>">
 		<h3 class="caption-t"><?php echo $realisation_name;?></h3>
+	</a>
 
 
 		<?php if ( get_field('video', $realisation_id) ) : ?>
@@ -22,7 +23,7 @@
 				<div class="video-wrapper article-complet article block">
 					
 					<div class="video-player full" 
-						id="video-<?php // echo( create_slug( get_sub_field( 'url_video' ))); ?>"
+						id="video-<?php echo( create_slug( get_sub_field( 'url_video' ))); ?>"
 						data-source="<?php the_sub_field('url_video'); ?>"
 						data-videohost="<?php the_sub_field('host_video'); ?>">
 						
@@ -39,15 +40,6 @@
 
 				</div>
 
-              <?php endwhile; ?>
-          <?php endif; ?>
-		
-		<figure class="realisation-caption">
-			<div class="realisation-photo-wrapper">
-				<img class="realisation-photo" 
-					src="<?php echo $photo[sizes][large]; ?>" 
-					alt="<?php echo $photo[alt]; ?>">
-			</div>
-		</figure>
-	</a>
+            <?php endwhile; ?>
+        <?php endif; ?>
 </li>
