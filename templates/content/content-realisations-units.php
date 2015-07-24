@@ -3,18 +3,18 @@
 <?php $photo = get_field('cover', $realisation_id); ?>
 <?php // $realisation_terms = wp_get_post_terms( $realisation_id, 'realisation-type'); ?>			
 <?php // $realisation_position = $realisation_terms[0]->name; //the last/lowest taxonomy level?>
-<article class="realisation column medium-8 large-6 left">
+<article class="realisation column small-12">
 	<h2 class="title--realisation"><?php echo $realisation_name;?></h2>
 
-		<?php if ( get_field('video', $realisation_id) ) : ?>
+	<?php if ( get_field('video', $realisation_id) ) : ?>
 
-            <?php while( has_sub_field( 'video', $realisation_id ) ): ?>
+        <?php while( has_sub_field( 'video', $realisation_id ) ): ?>
 
-                <?php $image = get_sub_field('image_video'); ?>
-                <?php $image_url = $image[sizes]['large']; ?>
-                <?php if ( $image_url && get_sub_field( 'url_video' ) ) : ?>
+            <?php $image = get_sub_field('image_video'); ?>
+            <?php $image_url = $image[sizes]['large']; ?>
+            <?php if ( $image_url && get_sub_field( 'url_video' ) ) : ?>
 
-				
+			<div class="column medium-6 large-8">
 				<div class="video-wrapper article-complet article block">
 					
 					<div class="video-player full" 
@@ -26,9 +26,16 @@
 					</div>
 
 				</div>
+			</div>
 
-				<?php endif; ?>
-            <?php endwhile; ?>
+			<?php endif; ?>
+        <?php endwhile; ?>
+
+	<div class="column medium-6 large-4">
 		<h5 class="desc--realisation"><?php the_field('short_description', $realisation_id);?></h5>
-        <?php endif; ?>
+		<!-- <a class="button primary expand" href="#">Voir le cas</a> -->
+	</div>
+    
+    <?php endif; ?>
+    <hr>
 </article>
