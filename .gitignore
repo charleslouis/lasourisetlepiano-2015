@@ -2,4 +2,6 @@ node_modules
 dist
 .tmp
 .sass-cache
-assets/js/scripts.min.js
+/assets/css
+/assets/js/scripts.min.js
+/assets/js/foundation.min.js
