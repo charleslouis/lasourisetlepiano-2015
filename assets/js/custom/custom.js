@@ -1,12 +1,6 @@
 (function ($) {
 
 	$('document').ready(function(){
-
-		$.fn.setAllToMaxHeight = function(){
-		    return this.height( Math.max.apply(this, $.map( this , function(e){ return $(e).height() }) ) );
-		}
-		$('.desc--realisation').setAllToMaxHeight();
-
 		toggleBullet('#creation-diapo-list');
 		removePhoneHref('.phone-link');
 		removePhoneHref('.skype-link');
