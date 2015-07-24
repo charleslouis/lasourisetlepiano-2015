@@ -54,6 +54,7 @@ module.exports = function(grunt) {
         },   
         files: {'assets/js/scripts.min.js' : [
           'assets/js/vendor/headroom.js',
+          'node_modules/scrollreveal/scrollReveal.js',
           'assets/js/vendor/jquery-headroom.js',
           'assets/js/custom/config.js',
           'assets/js/custom/helpers.js',
@@ -70,6 +71,7 @@ module.exports = function(grunt) {
         },        
         files: {'assets/js/scripts.min.js' : [
           'assets/js/vendor/headroom.js',
+          'node_modules/scrollreveal/scrollReveal.js',
           'assets/js/vendor/jquery-headroom.js',
           'assets/js/custom/config.js',
           'assets/js/custom/helpers.js',

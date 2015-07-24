@@ -21,5 +21,7 @@
 		$("#brand").headroom();
 		$("#menu").headroom();
 
+		window.sr = new scrollReveal();
+
 	});
 }(jQuery));

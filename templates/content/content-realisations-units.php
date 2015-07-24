@@ -3,7 +3,7 @@
 <?php $photo = get_field('cover', $realisation_id); ?>
 <?php // $realisation_terms = wp_get_post_terms( $realisation_id, 'realisation-type'); ?>			
 <?php // $realisation_position = $realisation_terms[0]->name; //the last/lowest taxonomy level?>
-<article class="realisation column small-12">
+<article class="realisation column small-12"  data-sr>
 	<h2 class="title--realisation"><?php echo $realisation_name;?></h2>
 
 	<?php if ( get_field('video', $realisation_id) ) : ?>
