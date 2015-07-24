@@ -48,11 +48,11 @@
 			@include transition(all $timing);
 		}
 		&:before{
-			top: 0;
+			top: 1px;
 			@include transform(translateY(-$distance));
 		}
 		&:after{
-			bottom: 0;
+			bottom: 1px;
 			@include transform(translateY($distance));
 		}
 	}

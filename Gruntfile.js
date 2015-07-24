@@ -53,6 +53,8 @@ module.exports = function(grunt) {
           beautify: true,          
         },   
         files: {'assets/js/scripts.min.js' : [
+          'assets/js/vendor/headroom.js',
+          'assets/js/vendor/jquery-headroom.js',
           'assets/js/custom/config.js',
           'assets/js/custom/helpers.js',
           'assets/js/custom/map.js',
@@ -67,6 +69,8 @@ module.exports = function(grunt) {
           report: 'gzip',
         },        
         files: {'assets/js/scripts.min.js' : [
+          'assets/js/vendor/headroom.js',
+          'assets/js/vendor/jquery-headroom.js',
           'assets/js/custom/config.js',
           'assets/js/custom/helpers.js',
           'assets/js/custom/map.js',

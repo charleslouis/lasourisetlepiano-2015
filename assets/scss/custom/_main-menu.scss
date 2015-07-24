@@ -1,0 +1,210 @@
+/**
+*
+* Style the menu in the footer (default) as seen on Luke W blog : http://lukew.com/
+* For menu in header, as in larger media queries and oldie browsers see main-menu-mq
+*
+**/
+
+.main-menu {
+	.main-menu-column{
+		padding: 0;
+	}
+	ul{
+		margin: 0;
+	}
+}
+
+.menu-item-main-menu {
+	border-top: solid 1px $grayLight;
+	&:last-child{
+		border-bottom: solid 1px $grayLight;
+		a{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.menu-item-main-menu  a,
+.navtoplink{
+	display: block;
+	padding: 1em 0.8em;
+	border-left: solid 0.5em $gray;
+	color: $gray;
+	font-family: $sansFontFamilyLight;
+	text-transform: uppercase;
+}
+
+.navtoplink{
+	&:before{
+	  display: block; 
+	  content: " "; 
+	  margin-top: 0; 
+	  height: $topbar-height; 
+	  visibility: hidden; 		
+	}
+}
+
+.menu-item-main-menu {
+	a {
+		&:hover,
+		&:focus{
+			background-color: $highlightColor;
+			color: $white;
+			border-left-color: $highlightColor;		
+		}		
+	}
+	&.active a{
+		color: $highlightColor;
+		border-left-color: $highlightColor;
+		cusor: text;
+		&:hover,
+		&:focus{
+			background-color: rgba($highlightColor, 0.3);
+			color: $white;
+		}
+	}
+}
+
+.navtop {
+	border: none;
+}
+
+.navtoplink {
+	@include clearfix;
+	position: relative;
+	border: none;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 1.2em;
+
+	span{
+		padding-right: emCalc(4);
+	}
+
+	span:after{
+		@include css-triangle(emCalc(12), $gray, bottom);
+		@include transition(all 0.3s ease-in-out);
+		float: right;
+		margin-top: emCalc(-4);
+	}
+	&:hover {
+		color: $highlightColor;
+		span:after {
+			@include css-triangle(emCalc(12), $highlightColor, bottom);
+			@include transition(all 0.3s ease-in-out);
+		}
+	}
+}
+
+
+
+/*=============================================================
+=            pushing menu to header             =
+=============================================================*/
+/**
+*
+* Style the menu in the header as in larger media queries and oldie browsers
+* Default menu with relative positioning is styled in main-menu-default
+*
+**/
+
+/*==========  create a mixin to avoid repetition btw Media Queries and Old browsers   ==========*/
+
+@mixin push_menu_to_top(){
+	.main-menu{		
+		position: fixed;
+		top: ($medium-topbar-height/3.5);
+		right: 0;
+		z-index: 1000;
+	}
+	
+	.navlist{
+		@include clearfix();
+		float: right;
+	}
+
+	.navtoplink{ //hide the TOP & arrow
+		display: none;
+	}
+
+	.menu-item-main-menu,
+	.menu-item-main-menu:last-child,
+	.menu-item-main-menu  a{
+		border: none;
+		float: left;
+	}
+
+	.menu-item-main-menu {
+		a{
+			position: relative;
+			display: inline-block;
+			padding: (($medium-topbar-height/3)/4) emCalc(8);			
+			margin: 0 emCalc(8);
+			font-size: (($medium-topbar-height/3)/2);
+			font-weight: normal;
+		}
+		@include topBottomBorderHover($grayLight, $white, 1px, $white, 0.3s, 10px );
+	}
+}
+
+
+/*==========  use the mixin for MQ and Oldies  ==========*/
+
+@media #{$topbar-media-query}{
+	@include push_menu_to_top();
+	.main-menu{
+		padding-right: 2em;
+	    
+	    &.headroom--not-top{
+	 		top: 7px; 
+			-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+			    
+			&.headroom--unpinned{
+				opacity: 0;
+			}
+
+			&.headroom--pinned{
+				opacity: 1; 
+			}
+	    }		
+	}
+}
+
+.oldie,
+.ie8,
+.ie7{
+	@include push_menu_to_top();
+	.main-menu{
+		top: -8px;
+	}
+	.menu-item-main-menu {
+		a{
+			line-height: 1em;
+		}
+		&.active a,
+		a:hover,
+		a:focus{
+			border-bottom: solid 1px $white ;
+		}
+	}
+}
+
+/*==========  fire large Mq  ==========*/
+
+@media #{$large} {
+	.main-menu{		
+		top: ($large-topbar-height/3);
+	}
+	.menu-item-main-menu {
+		a{
+			font-size: 1.125em;
+		}
+	}
+}
+
+
+/*-----  End of media queries pushing menu to header   ------*/

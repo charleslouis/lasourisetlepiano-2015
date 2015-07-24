@@ -1,0 +1,126 @@
+.contain-to-grid{
+	position: fixed;
+	z-index: 980;
+  border-bottom: solid 1px $grayLighter;
+}
+.brand{
+	@extend .hide-text;
+  border: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 75px;
+  height: $topbar-height;
+  background-image: $logo;
+  background-color: $black; 
+  background-repeat: no-repeat;
+  background-size:  contain;
+  background-position: left top; 
+}
+.no-svg {
+	.brand{
+		top: -5px;
+		background: $logo-fallback no-repeat;
+	}
+}
+
+.menu-access{
+	@extend .toggle-topbar;
+}
+
+
+/*=============================================================
+=            enlarge header to welcome the main menu          =
+=============================================================*/
+/**
+*
+* Style the menu in the header as in larger media queries and oldie browsers
+* Default header is styled in header-default
+*
+**/
+
+/*==========  Oldies  ==========*/
+.oldie{
+  .menu-access{ //lets hide the menu access in the header since main-menu sits in the top for oldie browsers
+    display: none;
+  }
+}
+
+/*==========  Media Queries   ==========*/
+
+@media #{$topbar-media-query} {
+  .contain-to-grid {
+    border-bottom: none;
+    background-color: transparent;
+   }
+  .top-bar{
+    height: $medium-topbar-height;
+    &.headroom--not-top{
+      height: ($medium-topbar-height) * .66;  
+      &.headroom--unpinned{
+        background-color: transparent; 
+        -webkit-transition: background-color 0.3s ease-in-out;
+        -moz-transition: background-color 0.3s ease-in-out;
+        -ms-transition: background-color 0.3s ease-in-out;
+        -o-transition: background-color 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+      }
+      &.headroom--pinned{
+        
+      }
+    }    
+  }
+  .brand{
+    top: 5px;
+    left: 5px;
+    width: 105px;
+    height: $medium-topbar-height - 5px;
+    
+    &.headroom--not-top{
+
+      height: 50px;
+      width: 65px;
+      
+      &.headroom--unpinned{
+        height: 85px;
+        width: 110px;
+        top: 0;
+        left: 0;
+        background-size: 90%;
+        background-position: center;        
+      }
+      &.headroom--pinned{
+        
+      }
+    }
+
+  }
+  .no-svg .brand{
+    top: -10px;
+    background-size: 160px;
+  }
+}
+
+@media #{$medium} {
+  .contain-to-grid .top-bar{
+    max-width: none;
+  }
+}
+
+@media #{$large} {
+  .top-bar{
+    height: $large-topbar-height;
+  }
+  .brand{
+    width: 145px;
+    height: 120px;
+    height: $large-topbar-height - 5px;
+   
+    &.headroom--not-top{      
+      &.headroom--unpinned{}
+      &.headroom--pinned{}
+    } 
+
+  }
+}
